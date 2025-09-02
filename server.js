@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const transporter = nodemailer.createTransporter({
   service: 'gmail',
   auth: {
-    user: 'YOUR_EMAIL@gmail.com',
-    pass: 'YOUR_APP_PASSWORD'
+    user: 'citilogisticforms@gmail.com',
+    pass: 'citilogistics12345!@#$%Q'
   }
 });
 
@@ -31,7 +31,7 @@ app.post('/submit-booking', upload.array('files'), async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'YOUR_DAD_EMAIL@gmail.com',
+    to: 'citilogisticforms@gmail.com',
     subject: `New Booking from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDetails: ${details}`,
     attachments
