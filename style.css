@@ -17,6 +17,18 @@ header {
   padding: 1rem 0;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  height: 50px; /* Adjust this value to make logo bigger/smaller */
+  width: auto;
+  margin-right: 1rem;
+}
+
 header h1 {
   margin: 0;
   font-size: 1.8rem;
