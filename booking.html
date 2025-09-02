@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Move - Citi Logistics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Citi Logistics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html" class="active">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Book Your Move</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="details">Items to Move:</label>
+      <textarea id="details" name="details" rows="5" placeholder="Describe the items and sizes"></textarea>
+
+      <label for="files">Upload Images/Videos:</label>
+      <input type="file" id="files" name="files[]" multiple accept="image/*,video/*">
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Citi Logistics. All rights reserved.</p>
+  </footer>
+</body>
+</html>
