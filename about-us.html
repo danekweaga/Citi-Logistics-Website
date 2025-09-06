@@ -2,24 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Citi Logistics</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container logo">
+   <header>
+    <div class="header-container">
+        <div class="logo">
             <img src="assets/logo.png" alt="Citi Logistics Logo">
             <h1>Citi Logistics</h1>
         </div>
-        <nav>
+        
+        <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="our-services.html">Our Services</a>
-            <a href="about-us.html" class="active">About Us</a>
+            <a href="about-us.html">About Us</a>
             <a href="contact-us.html">Contact Us</a>
-            <a href="booking.html">Booking</a>
-            <a href="reviews.html" class="active">Reviews</a>
+            <a href="booking.html">Book Now</a>
+            <a href="reviews.html">Reviews</a>
         </nav>
-    </header>
+        
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="our-services.html">Our Services</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="booking.html">Book Now</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+    </div>
+</header>
     <main class="container">
         <h2>About Us</h2>
         <p>
@@ -43,5 +62,6 @@
     <footer>
         &copy; 2025 Citi Logistics. All rights reserved.
     </footer>
+<script src="navbar.js"></script>
 </body>
 </html>

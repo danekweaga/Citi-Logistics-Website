@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const multer = require('multer');
 const nodemailer = require('nodemailer');
@@ -10,16 +12,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Email transporter configuration
-const transporter = nodemailer.createTransporter({
+// Email transporter configuration - FIXED: createTransport (not createTransporter)
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'citilogisticforms@gmail.com',
-    pass: 'citilogistics12345!@#$%Q'
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
+
   }
 });
 
-// Booking form handler (existing)
+// Booking form handler
 app.post('/submit-booking', upload.array('files'), async (req, res) => {
   const { name, email, phone, details } = req.body;
   const files = req.files;
@@ -46,13 +49,13 @@ app.post('/submit-booking', upload.array('files'), async (req, res) => {
   }
 });
 
-// Contact form handler (new)
+// Contact form handler
 app.post('/submit-contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
     from: email,
-    to: 'YOUR_DAD_EMAIL@gmail.com',
+    to: 'citilogisticforms@gmail.com',
     subject: `Contact Form Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     html: `
@@ -80,6 +83,6 @@ app.post('/submit-contact', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server running at http://localhost:3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server running at http://localhost:${process.env.PORT || 3000}`);
 });

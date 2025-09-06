@@ -3,33 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us | Citi Logistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title | Citi Logistics</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <header>
-        <div class="container logo">
+    <div class="header-container">
+        <div class="logo">
             <img src="assets/logo.png" alt="Citi Logistics Logo">
             <h1>Citi Logistics</h1>
         </div>
-
-        <nav>
+        
+        <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="our-services.html">Our Services</a>
             <a href="about-us.html">About Us</a>
-            <a href="contact-us.html" class="active">Contact Us</a>
-            <a href="booking.html">Booking</a>
-            <a href="reviews.html" class="active">Reviews</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="booking.html">Book Now</a>
+            <a href="reviews.html">Reviews</a>
         </nav>
-
-    </header>
+        
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="our-services.html">Our Services</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="booking.html">Book Now</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+    </div>
+</header>
 
     <main class="container">
         <h2>Contact Us</h2>
 
-        <form>
+        <form action="/submit-contact" method="POST">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -52,6 +69,6 @@
     <footer>
         &copy; 2025 Citi Logistics. All rights reserved.
     </footer>
-
+<script src="navbar.js"></script>
 </body>
 </html>
