@@ -10,6 +10,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  
 }
 
 /* --- Header & Navigation (Desktop) --- */
@@ -68,6 +69,7 @@ header h1 {
   padding: 60px 0;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .hero-content {
@@ -116,6 +118,8 @@ main h2 {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #f0f0f0;
+  margin-top: 30px;
+  padding-top: 20px;
 }
 
 /* Service Cards */
@@ -226,3 +230,27 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+/* --- Checklist Styles --- */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.checklist li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.checklist li:before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
