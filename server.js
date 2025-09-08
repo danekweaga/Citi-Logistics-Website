@@ -65,19 +65,20 @@ app.post('/submit-booking', upload.array('files'), async (req, res) => {
   }
 });
 
-// Contact form handler - UPDATED FOR JSON RESPONSE
+// Contact form handler - UPDATED WITH PHONE FIELD
 app.post('/submit-contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, phone, message } = req.body;
 
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER, // Send to yourself
+    to: process.env.EMAIL_USER,
     subject: `Contact Form Message from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`,
     html: `
       <h3>New Contact Form Message</h3>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
       <p><strong>Message:</strong></p>
       <p>${message.replace(/\n/g, '<br>')}</p>
     `
@@ -85,20 +86,20 @@ app.post('/submit-contact', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    // JSON response for single-page app
     res.json({ 
       success: true, 
       message: 'Message sent successfully! We will get back to you soon.' 
     });
   } catch (error) {
     console.error('Contact error:', error);
-    // JSON error response
     res.status(500).json({ 
       success: false, 
       message: 'Failed to send message. Please try again.' 
     });
   }
 });
+
+// Booking form handler - NO CHANGES NEEDED (already handles the fields)
 
 // Serve your single-page app for all routes
 app.get('*', (req, res) => {

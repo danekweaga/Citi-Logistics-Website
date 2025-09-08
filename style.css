@@ -303,3 +303,58 @@ html {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #004080;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background: #003060;
+}
+
+/* File input styling */
+.form-group input[type="file"] {
+    padding: 8px;
+    border: 2px dashed #ddd;
+    background: #f9f9f9;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #004080;
+    background: #f0f7ff;
+}
