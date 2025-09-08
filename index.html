@@ -1,70 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Citi Logistics - Moving Services</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citi Logistics - Moving Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Citi Logistics Logo">
-        <h1>Citi Logistics</h1>
-      </div>
-      
-      <nav class="desktop-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="our-services.html">Our Services</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="booking.html">Book Now</a>
-        <a href="reviews.html">Reviews</a>
-      </nav>
-      
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <nav class="mobile-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="our-services.html">Our Services</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="booking.html">Book Now</a>
-        <a href="reviews.html">Reviews</a>
-      </nav>
-    </div>
-  </header>
-  
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Fast & Reliable Moving Services</h2>
-      <p>Professional movers you can trust. Serving your city with care and efficiency.</p>
-      <a href="booking.html" class="cta-button">Book Your Move</a>
-    </div>
-  </section>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Citi Logistics Logo">
+                <h1>Citi Logistics</h1>
+            </div>
+            
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+                <a href="#booking" class="nav-link">Book Now</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+            </nav>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="mobile-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+                <a href="#booking" class="nav-link">Book Now</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+            </nav>
+        </div>
+    </header>
 
-  <main class="container">
-    <h2>Why Choose Citi Logistics?</h2>
-    <ul class="checklist">
-      <li>Reliable & On-Time Service</li>
-      <li>Professional Moving Team</li>
-      <li>Affordable Rates</li>
-    </ul>
-  </main>
+    <!-- HOME SECTION -->
+    <section id="home" class="section">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Fast & Reliable Moving Services</h2>
+                <p>Professional movers you can trust. Serving your city with care and efficiency.</p>
+                <a href="#booking" class="cta-button">Book Your Move</a>
+            </div>
+        </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Citi Logistics. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  <script src="navbar.js"></script>
+        <div class="container">
+            <h2>Why Choose Citi Logistics?</h2>
+            <ul class="checklist">
+                <li>Reliable & On-Time Service</li>
+                <li>Professional Moving Team</li>
+                <li>Affordable Rates</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-card">
+                    <h3>Delivery Services</h3>
+                    <p>Fast and reliable delivery of packages, goods, and items to any destination in the city or beyond.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Residential Moving</h3>
+                    <p>Professional moving solutions for individuals and families, ensuring a smooth and stress-free relocation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Corporate & Office Relocation</h3>
+                    <p>Efficient transportation and setup for businesses moving offices, with minimal downtime and disruption.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pickup & Drop-off</h3>
+                    <p>Convenient pickup and drop-off services for people, parcels, and special deliveries, tailored to your schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Citi Logistics is a leading logistics and supply chain solutions provider, committed to delivering excellence in freight forwarding, warehousing, customs clearance, and last mile delivery.</p>
+            <p>With years of experience and a passion for innovation, our team ensures your goods move efficiently and securely from origin to destination.</p>
+            <h3>Our Mission</h3>
+            <p>To provide reliable, cost-effective, and customer-focused logistics services that empower businesses to grow.</p>
+            <h3>Why Choose Us?</h3>
+            <ul class="checklist">
+                <li>Experienced professionals</li>
+                <li>Modern fleet and facilities</li>
+                <li>Customer-centric approach</li>
+                <li>Transparent pricing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Email: info@citilogistics.com</p>
+                <p>Phone: +1 506 333 5729</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="section">
+        <div class="container">
+            <h2>Book Your Move</h2>
+            <form id="bookingForm">
+                <label for="booking-name">Full Name:</label>
+                <input type="text" id="booking-name" name="booking-name" required>
+                <label for="booking-email">Email:</label>
+                <input type="email" id="booking-email" name="booking-email" required>
+                <label for="booking-phone">Phone Number:</label>
+                <input type="tel" id="booking-phone" name="booking-phone" required>
+                <label for="details">Items to Move:</label>
+                <textarea id="details" name="details" rows="5" placeholder="Describe items and sizes"></textarea>
+                <label for="files">Upload Images/Videos:</label>
+                <input type="file" id="files" name="files" multiple accept="image/*,video/*">
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="review-card">
+                <strong>Jane Doe</strong>
+                <p>Excellent service! My move was smooth and stress-free.</p>
+            </div>
+            <div class="review-card">
+                <strong>John Smith</strong>
+                <p>Prompt, professional, and affordable. Highly recommended.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Citi Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="onepage.js"></script>
 </body>
 </html>
