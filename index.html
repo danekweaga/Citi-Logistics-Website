@@ -114,6 +114,8 @@
                 <input type="text" id="name" name="name" required>
                 <label for="email">Your Email</label>
                 <input type="email" id="email" name="email" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
@@ -121,26 +123,56 @@
             <div class="contact-info">
                 <h3>Contact Info</h3>
                 <p>Email: info@citilogistics.com</p>
-                <p>Phone: +1 506 333 5729</p>
             </div>
         </div>
     </section>
 
     <!-- BOOKING SECTION -->
-    <form id="bookingForm" action="/submit-booking" method="POST" enctype="multipart/form-data">
+    <section id="booking" class="section">
         <div class="container">
             <h2>Book Your Move</h2>
-            <form id="bookingForm">
-                <label for="booking-name">Full Name:</label>
-                <input type="text" id="booking-name" name="booking-name" required>
-                <label for="booking-email">Email:</label>
-                <input type="email" id="booking-email" name="booking-email" required>
-                <label for="booking-phone">Phone Number:</label>
-                <input type="tel" id="booking-phone" name="booking-phone" required>
-                <label for="details">Items to Move:</label>
-                <textarea id="details" name="details" rows="5" placeholder="Describe items and sizes"></textarea>
-                <label for="files">Upload Images/Videos:</label>
-                <input type="file" id="files" name="files" multiple accept="image/*,video/*">
+            
+            <form id="bookingForm" action="/submit-booking" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="booking-name">Full Name:</label>
+                    <input type="text" id="booking-name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="booking-email">Email:</label>
+                    <input type="email" id="booking-email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="booking-phone">Phone Number:</label>
+                    <input type="tel" id="booking-phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="move-date">Move Date:</label>
+                    <input type="date" id="move-date" name="move-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="move-type">Move Type:</label>
+                    <select id="move-type" name="move-type" required>
+                        <option value="">Select move type</option>
+                        <option value="residential">Residential Moving</option>
+                        <option value="commercial">Commercial Moving</option>
+                        <option value="delivery">Package Delivery</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Items to Move:</label>
+                    <textarea id="details" name="details" rows="5" placeholder="Describe items and sizes" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="files">Upload Images/Videos (optional):</label>
+                    <input type="file" id="files" name="files" multiple accept="image/*,video/*">
+                </div>
+                
                 <button type="submit">Submit Booking</button>
             </form>
         </div>
