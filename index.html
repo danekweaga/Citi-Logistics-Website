@@ -109,7 +109,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-            <form id="contactForm">
+            <form id="contactForm" action="/submit-contact" method="POST">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Your Email</label>
@@ -127,7 +127,7 @@
     </section>
 
     <!-- BOOKING SECTION -->
-    <section id="booking" class="section">
+    <form id="bookingForm" action="/submit-booking" method="POST" enctype="multipart/form-data">
         <div class="container">
             <h2>Book Your Move</h2>
             <form id="bookingForm">

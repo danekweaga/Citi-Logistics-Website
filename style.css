@@ -274,3 +274,32 @@ html {
 html {
     scroll-padding-top: 80px; /* Height of your fixed header */
 }
+
+/* Form notification styles */
+#form-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 10000;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    animation: slideIn 0.3s ease-out;
+}
+
+#form-notification.success {
+    background-color: #28a745;
+}
+
+#form-notification.error {
+    background-color: #dc3545;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
