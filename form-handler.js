@@ -1,4 +1,4 @@
-// Form handling for single-page website
+// Form handling for SQL backend
 document.addEventListener('DOMContentLoaded', function() {
     initializeForms();
 });
@@ -17,18 +17,24 @@ function initializeForms() {
     }
 }
 
-async function handleContactSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+async function handleFormSubmit(form, endpoint) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    
+    // Show loading state
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
     
     try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
+        const formData = new FormData(form);
+        const formObject = Object.fromEntries(formData.entries());
+        
+        const response = await fetch(endpoint, {
+            method: 'POST',
             headers: {
-                'Accept': 'application/json'
-            }
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formObject)
         });
         
         const result = await response.json();
@@ -40,64 +46,29 @@ async function handleContactSubmit(e) {
             showNotification(result.message, 'error');
         }
     } catch (error) {
-        showNotification('Failed to send message. Please try again.', 'error');
-        console.error('Contact form error:', error);
+        console.error('Form submission error:', error);
+        showNotification('Failed to submit form. Please try again.', 'error');
+    } finally {
+        // Restore button state
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
     }
+}
+
+async function handleContactSubmit(e) {
+    e.preventDefault();
+    await handleFormSubmit(e.target, '/submit-contact');
 }
 
 async function handleBookingSubmit(e) {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    
-    try {
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            showNotification(result.message, 'success');
-            form.reset();
-        } else {
-            showNotification(result.message, 'error');
-        }
-    } catch (error) {
-        showNotification('Failed to submit booking. Please try again.', 'error');
-        console.error('Booking form error:', error);
-    }
+    await handleFormSubmit(e.target, '/submit-booking');
 }
 
 function showNotification(message, type) {
-    // Remove any existing notifications
-    const existingNotification = document.getElementById('form-notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification element
+    // Your existing notification code
     const notification = document.createElement('div');
-    notification.id = 'form-notification';
-    notification.className = type;
     notification.textContent = message;
-    
-    // Add to page
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentNode) {
-            notification.remove();
-        }
-    }, 5000);
-    
-    // Add click to dismiss
-    notification.addEventListener('click', () => {
-        notification.remove();
-    });
+    notification.className = `notification ${type}`;
+    // Add to page and auto-remove
 }
