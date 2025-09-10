@@ -109,17 +109,12 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Replace with your actual Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="0b24629e-fbe3-498d-ba2a-af991b89f11b">
+        <form id="contactForm" action="https://formsubmit.co/c1e0b9e80e1f59f65a9e0b174e089613" method="POST" target="_blank">
+            <input type="hidden" name="_subject" value="New Contact Request - Citi Logistics">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honeypot" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
             
-            <!-- Form Subject -->
-            <input type="hidden" name="subject" value="New Contact Request - Citi Logistics">
-            
-            <!-- Honeypot Spam Protection -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            
-            <!-- Form Inputs with proper labels -->
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
@@ -225,7 +220,6 @@
     <script src="navbar.js"></script>
 <script src="onepage.js"></script>
 <script src="formsubmit-handler.js"></script>
-<script src="web3forms-handler.js"></script> <!-- Add this line -->
     
 </body>
 </html>

@@ -1,9 +1,9 @@
-// FormSubmit handling
+// FormSubmit handling for both forms
 document.addEventListener('DOMContentLoaded', function() {
     // Contact form
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function() {
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
             
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.textContent = 'Sending...';
             button.disabled = true;
             
-            // Let the form submit normally, then show message
+            // Show success message after a short delay
             setTimeout(() => {
                 alert('Thank you for your message! We will contact you soon.');
                 button.textContent = originalText;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Booking form
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
+        bookingForm.addEventListener('submit', function() {
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
             
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.textContent = 'Sending...';
             button.disabled = true;
             
-            // Let the form submit normally, then show message
+            // Show success message after a short delay
             setTimeout(() => {
                 alert('Thank you for your booking request! We will confirm shortly.');
                 button.textContent = originalText;
