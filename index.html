@@ -109,34 +109,39 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-                <form id="contactForm" action="https://formsubmit.co/c1e0b9e80e1f59f65a9e0b174e089613" method="POST" target="_blank">
-                <input type="hidden" name="_subject" value="New Contact Request - Citi Logistics">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honeypot" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-                
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your actual Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="0b24629e-fbe3-498d-ba2a-af991b89f11bE">
+            
+            <!-- Form Subject -->
+            <input type="hidden" name="subject" value="New Contact Request - Citi Logistics">
+            
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <!-- Form Inputs with proper labels -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
 
-                <button type="submit">Send Message</button>
-            </form>
+            <button type="submit">Send Message</button>
+        </form>
             <div class="contact-info">
                 <h3>Contact Info</h3>
                 <p>Email: info@citilogistics.com</p>
