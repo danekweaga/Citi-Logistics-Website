@@ -358,3 +358,97 @@ form button:hover {
     border-color: #004080;
     background: #f0f7ff;
 }
+
+/* Reviews Section Styles */
+#reviews-container {
+    min-height: 100px;
+    margin-bottom: 30px;
+}
+
+.no-reviews-message {
+    text-align: center;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #004080;
+    font-style: italic;
+    color: #666;
+}
+
+.add-review {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #004080;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    border-left: 4px solid #ffcc00;
+}
+
+.review-card .rating {
+    color: #ffc107;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.review-card strong {
+    color: #004080;
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.review-card .date {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Review Management Styles */
+.delete-review-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.delete-review-btn:hover {
+    background: #c82333;
+}
+
+.admin-panel {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #004080;
+}
+
+.admin-panel h3 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.admin-panel button {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.admin-panel button:hover {
+    background: #003060;
+}

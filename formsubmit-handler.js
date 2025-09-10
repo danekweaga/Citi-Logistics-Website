@@ -39,4 +39,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
+
+    // Review form handling
+const reviewForm = document.getElementById('reviewForm');
+if (reviewForm) {
+    reviewForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('review-name').value;
+        const rating = parseInt(document.getElementById('review-rating').value);
+        const text = document.getElementById('review-text').value;
+        
+        if (name && rating && text) {
+            reviewManager.addReview(name, rating, text);
+            alert('Thank you for your review!');
+            this.reset();
+        }
+    });
+}s
 });
