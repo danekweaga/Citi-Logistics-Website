@@ -75,26 +75,3 @@ function closeMobileMenu() {
         document.querySelector('.mobile-nav-toggle i').classList.add('fa-bars');
     }
 }
-
-// Set up form handlers
-function setupFormHandlers() {
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you soon.');
-            this.reset();
-        });
-    }
-    
-    // Booking form
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your booking request! We will confirm shortly.');
-            this.reset();
-        });
-    }
-}
